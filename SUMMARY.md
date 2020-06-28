@@ -12,3 +12,4 @@
   * [5. return-to-libc攻击](software_security/chapter05_Return-to-libc_Attack/return_to_libc_attack.md)
   * [6. 格式化字符串攻击](software_security/chapter06_Format_String_Vulnerablity/Format_String_Vulnerablity.md)
   * [7. 竞争条件漏洞](software_security/chapter07_Race_Condition_Vulnerability/Race_Condition_Vulnerability.md)
+  * [8. Dirty COW](software_security/chapter08_Dirty_COW_Race_Condition_Attack/Dirty_COW_Race_Condition_Attack.md)
