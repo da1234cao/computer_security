@@ -1,0 +1,57 @@
+
+使用alice账号，添加samy为好友，HTTP Header如下所示
+Request URL:http://www.xsslabelgg.com/action/friends/add?friend=47
+            &__elgg_ts=1594634598
+            &__elgg_token=i_ODReeUsehhSb1JkBlUOQ
+            &__elgg_ts=1594634598
+            &__elgg_token=i_ODReeUsehhSb1JkBlUOQ
+Host:www.xsslabelgg.com
+
+
+查看该页面的html源码，找到嵌入在页面中的：elgg.security.token.__elgg_ts 和 elgg.security.token.__elgg_token
+var elgg = 
+{
+    "config":{"lastcache":1549469404,"viewtype":"default","simplecache_enabled":1},
+    "security":{"token":{"__elgg_ts":1594634598,"__elgg_token":"i_ODReeUsehhSb1JkBlUOQ"}},
+    "session":{"user":{"guid":44,"type":"user","subtype":"","owner_guid":44,
+               "container_guid":0,"site_guid":1,"time_created":"2017-07-26T20:29:47+00:00",
+               "time_updated":"2017-07-26T20:29:48+00:00",
+               "url":"http:\/\/www.xsslabelgg.com\/profile\/alice",
+               "name":"Alice","username":"alice","language":"en","admin":false},
+               "token":"VNxZb5d0hPy3F8atWS4KPJ"},
+    "_data":{},
+    "page_owner":{"guid":47,"type":"user","subtype":"","owner_guid":47,"container_guid":0,
+                  "site_guid":1,"time_created":"2017-07-26T20:30:59+00:00",
+                  "time_updated":"2020-07-13T09:39:32+00:00",
+                  "url":"http:\/\/www.xsslabelgg.com\/profile\/samy",
+                  "name":"Samy","username":"samy","language":"en"}
+};
+
+
+<a href="http://www.xsslabelgg.com/action/friends/add?friend=47&amp;
+    __elgg_ts=1594691548&amp;__elgg_token=HcunH-Lm_a09OwBPn6rakA" 
+    class="elgg-button elgg-button-action">Add friend</a>
+
+function() {
+  var $menu = $(this).closest('.elgg-menu');
+
+  // Be optimistic about success
+  elgg.ui.toggleMenuItems($menu, menuItemNameB, menuItemNameA);
+
+  // Send the ajax request
+  elgg.action($(this).attr('href'), {
+    success: function(json) {
+      if (json.system_messages.error.length) {
+        // Something went wrong, so undo the optimistic changes
+        elgg.ui.toggleMenuItems($menu, menuItemNameA, menuItemNameB);
+      }
+    },
+    error: function() {
+      // Something went wrong, so undo the optimistic changes
+      elgg.ui.toggleMenuItems($menu, menuItemNameA, menuItemNameB);
+    }
+  });
+
+  // Don't want to actually click the link
+  return false;
+}

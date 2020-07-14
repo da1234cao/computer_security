@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Part 1 软件安全](software_security/README.md) 
-* [1. 特权程序](software_security/chapter01_setuid_programs/setuid_programs.md)
+  * [1. 特权程序](software_security/chapter01_setuid_programs/setuid_programs.md)
   * [2. 通过环境变量攻击](software_security/chapter02_Attacks_Through_Environment_Variables/Attacks_Through_Environment_Variables.md)
   * [3. shellshock 攻击](software_security/chapter03_Shellshock_Attack/Shellshock_Attack.md)
   * [4.1 程序在内存中的布局](software_security/chapter04_Buffer_Overflow_Attack/程序在内存中的布局.md)
@@ -13,5 +13,7 @@
   * [7. 竞争条件漏洞](software_security/chapter07_Race_Condition_Vulnerability/Race_Condition_Vulnerability.md)
   * [8. Dirty COW](software_security/chapter08_Dirty_COW_Race_Condition_Attack/Dirty_COW_Race_Condition_Attack.md)
 
-* [Part1 web安全](web_security/README.md)
+* [Part 2 web安全](web_security/README.md)
   * [CSRF](web_security/Chapter09_Cross_Site_Request_Forgery/csrf.md)
+  * [XSS](web_security/Chapter10_Cross-Site_Scripting_Attack/XSS_Attack.md)
+

