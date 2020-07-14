@@ -13,7 +13,7 @@
   * [7. 竞争条件漏洞](software_security/chapter07_Race_Condition_Vulnerability/Race_Condition_Vulnerability.md)
   * [8. Dirty COW](software_security/chapter08_Dirty_COW_Race_Condition_Attack/Dirty_COW_Race_Condition_Attack.md)
 
-* [Part 2 web安全](web_security/README.md)
+
+* [Part1 web安全](web_security/README.md)
   * [CSRF](web_security/Chapter09_Cross_Site_Request_Forgery/csrf.md)
-  * [XSS](web_security/Chapter10_Cross-Site_Scripting_Attack/XSS_Attack.md)
 
