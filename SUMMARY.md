@@ -14,6 +14,7 @@
   * [8. Dirty COW](software_security/chapter08_Dirty_COW_Race_Condition_Attack/Dirty_COW_Race_Condition_Attack.md)
 
 
-* [Part1 web安全](web_security/README.md)
+* [Part 2 web安全](web_security/README.md)
   * [CSRF](web_security/Chapter09_Cross_Site_Request_Forgery/csrf.md)
+  * [XSS](web_security/Chapter10_Cross-Site_Scripting_Attack/XSS_Attack.md)
 
