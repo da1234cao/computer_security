@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            span {width:100px; display:block; float:left;font-size: 15px;}
+        </style>
+        <script>
+            window.onload = function(){
+
+                var oButton = document.getElementById('button');
+
+                oButton.onclick = function(){
+                    var oName = document.getElementById('name');
+                    var oPassword = document.getElementById('password');
+                    var content = notEmpty(oName.value) && notEmpty(oPassword.value);
+                    if(!content)
+                        alert('输入为空');
+                    return content;
+                }
+
+                function notEmpty(val) {
+                    var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+                    if (str == '' || str == undefined || str == null) {
+                        // console.log('空');
+                        return false;
+                    } else {
+                        // console.log('非空');
+                        return true;
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- 这里直接用form对的不怎么齐，可以在里面镶一个table -->
+        <form action="query_process3.php" method="POST">
+            <span>Name:</span>
+            <input id='name' type="text" name='name'><br>
+            <span>Password:</span>
+            <input id='password' type="text" name='password'><br><br>
+            <input id='button' type="submit" value="submit"><br>
+        </form>
+    </body>
+</html>
