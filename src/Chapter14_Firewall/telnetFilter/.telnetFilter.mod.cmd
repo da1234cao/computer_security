@@ -1,0 +1,1 @@
+cmd_/home/dacao/exercise/computer_security/src/Chapter14_Firewall/telnetFilter/telnetFilter.mod := { echo  /home/dacao/exercise/computer_security/src/Chapter14_Firewall/telnetFilter/telnetFilter.o; echo; } > /home/dacao/exercise/computer_security/src/Chapter14_Firewall/telnetFilter/telnetFilter.mod

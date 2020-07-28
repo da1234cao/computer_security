@@ -21,3 +21,6 @@
 
 * [Part 3 网络安全](network_security/README.md)
   * [12.1数据包的嗅探](network_security/chapter12_packet_sniffing_and_spoofing/packet_sniffing.md)
+  * [13.1 MAC首部 IP首部 TCP首部介绍](network_security/Chapter13_Attacks_on_the_TCP_Protocol/头部介绍.md)
+  * [13.2 基于TCP协议的攻击](network_security/Chapter13_Attacks_on_the_TCP_Protocol/syn_flooding.md)
+  * [14 防火墙](network_security/Chapter14_Firewall/firewall.md)
