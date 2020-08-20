@@ -24,3 +24,17 @@ gitbook文档：https://app.gitbook.com/@dacao-1/s/computer-security/
    ```
 
    
+
+## 评价
+
+一本不错的**安全导论**书籍：软件安全、web安全、网络安全。
+
+软件安全：特权程序，缓冲区溢出；
+
+web安全：CSRF，XSS，SQL注入；
+
+网络安全：TCP攻击，防火墙，DNS攻击，[VPN，PKI，TLS]；
+
+网络[软件/程序/代码]是比较有意思的东西。但我**需要环境编程和网络编程的加持**。
+
+这本书暂时告一段落。
